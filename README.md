@@ -1,9 +1,10 @@
-> Ruby Capstone Project (web scrapping)
+>Ruby Capstone Project (web scrapping)
+
 This is the Ruby's Capstone project for Microverse. This project creates a web scraper built-up with Ruby
 
 ## What does it do
 
-With this program, built with Ruby, you can access to all the smart phones on Jumia online shop, get all the products, specifications and its price range.the products are listed on your terminal and stored in an separated CSV file.
+With this program, built with Ruby, you can have access to all the smart phones on Jumia online shop, get all the products, specifications and its price range.the products are listed on your terminal and stored in an separated CSV file.
 
 ## Built With
 
@@ -34,24 +35,12 @@ Run bundle install in command line to install Nokogiri and HTTParty Gem.
 Run 'ruby ./bin/main.rb'.
 Run this command on your terminal in order to install RSPEC: gem install rspec
 
-
-
-
-
 👤 **Author1**
 Aremu Lucky
 
 - Github: [@githubhandle](https://github.com/Luckyaremu)
 - Twitter: [@twitterhandle](@luckyaremu)
-- Linkedin: [linkedin]()
-
-
-👤 **Author1**
-Aremu Lucky
-
-- Github: [@githubhandle](https://github.com/Luckyaremu)
-- Twitter: [@twitterhandle](@luckyaremu)
-- Linkedin: [linkedin](@aremu lucky)
+- Linkedin: [linkedin](https://www.linkedin.com/in/lucky-aremu-24807a145/)
 
 
 ## 🤝 Contributing
@@ -70,6 +59,7 @@ Microverse
 Jumai.com.ng
 HTTParty Gem
 Nokogiri Gem
+Youtube.com
 
 ## 📝 License
 
