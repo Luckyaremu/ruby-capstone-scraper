@@ -1,3 +1,7 @@
+require 'nokogiri'
+require 'httparty'
+require 'rubocop'
+
 class Bot
   # rubocop: disable Metrics/MethodLength
 
