@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 class Bot
   # rubocop: disable Metrics/MethodLength
 

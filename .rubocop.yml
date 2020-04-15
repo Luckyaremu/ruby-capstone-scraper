@@ -45,7 +45,7 @@ Lint/UselessAssignment:
   Enabled: false
 
   Style/HashEachMethods:
-  Enabled: false
+  Enabled: true
 Style/HashTransformKeys:
   Enabled: false
 Style/HashTransformValues:
