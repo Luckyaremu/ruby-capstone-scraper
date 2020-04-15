@@ -4,7 +4,7 @@ This is the Ruby's Capstone project for Microverse. This project creates a web s
 
 ## What does it do
 
-With this program, built with Ruby, you can access all the smart phones on Jumia online shop, get all the products, specifications and its price range.the products are listed on terminal and stored in a CSV file.
+With this program, built with Ruby, you can access all the smart phones on Jumia online shop, get all the products, specifications and its price range.the products are listed on terminal and stored in a CSV file attached.
 
 ## Built With
 - Ruby
