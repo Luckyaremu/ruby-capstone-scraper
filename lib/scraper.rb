@@ -1,8 +1,5 @@
 #!/usr/bin/env ruby
 # require_relative '../bin/main.rb'
-require 'nokogiri'
-require 'httparty'
-require 'rubocop'
 
 class Bot
   def feedback
@@ -12,17 +9,9 @@ class Bot
     puts 'Goodbye'
   end
 
-  def export(smart_phone)
-    CSV.open('smart_phone.csv', 'w') do |csv|
-      smart_phone.each do |smart_phone1|
-        csv << [smart_phone1]
-      end
-    end
-  end
-
   def added(shop)
     puts "Added phone brand #{shop[:brand]}"
-    puts 'all techno phones available on Jumia Nigeria is been scrapped'
+    puts 'Scraping all smart phone ********'
     puts ''
   end
 
@@ -61,6 +50,14 @@ class Bot
       end
     end
     feedback
+  end
+
+  def export(smart_phone)
+    CSV.open('smart_phone.csv', 'w') do |csv|
+      smart_phone.each do |smart_phone1|
+        csv << [smart_phone1]
+      end
+    end
   end
 end
 start = Bot.new

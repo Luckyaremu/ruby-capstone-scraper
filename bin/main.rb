@@ -2,7 +2,6 @@
 require 'nokogiri'
 require 'httparty'
 require 'rubocop'
-require_relative '../lib/scraper.rb'
 
 class Start
   def initialize
@@ -29,8 +28,10 @@ class Start
   def display
     puts 'Welcome to jumia.com.ng'
     puts 'This website helps you to find all smart-phone and tablets sold on jumia online shop.'
-    puts 'Type your any keywords and press enter to find out everything related to Smart phone sold on jumia.'
+    puts 'Type Okay and press enter to find out everything related to Smart phone sold on jumia.'
   end
 end
 new_search = Start.new
 new_search.search
+
+require_relative '../lib/scraper.rb'
