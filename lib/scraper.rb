@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+
 class Bot
   # rubocop: disable Metrics/MethodLength
 
@@ -10,7 +11,7 @@ class Bot
     shop_cart = parsed_page.css('a.link')
     page = 1
     per_page = shop_cart.count
-    total = 100 # parsed_page.css('span.total-products').text.split(' ')[0].split('').drop(1).join('').to_i #1978058
+    total = 1000
     last_page = (total / per_page)
     begin
       while page <= last_page

@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-gem 'rubocop'
+gem 'byebug'
 gem 'httparty'
 gem 'nokogiri'
-gem 'byebug'
+gem 'rubocop'
