@@ -20,6 +20,12 @@ class Bot
     end
   end
 
+  def added(shop)
+    puts "Added phone brand #{shop[:brand]}"
+    puts 'all techno phones available on Jumia Nigeria is been scrapped'
+    puts ''
+  end
+
   # rubocop: disable Metrics/MethodLength
 
   def scraper
@@ -30,7 +36,7 @@ class Bot
     shop_cart = parsed_page.css('a.link')
     page = 1
     per_page = shop_cart.count
-    total = 50 # parsed_page.css('span.total-products').text.split(' ')[0].split('').drop(1).join('').to_i #1978058
+    total = 100 # parsed_page.css('span.total-products').text.split(' ')[0].split('').drop(1).join('').to_i #1978058
     last_page = (total / per_page)
     begin
       while page <= last_page
@@ -49,9 +55,7 @@ class Bot
           }
           export(smart_phone)
           smart_phone << shop
-          puts "Added phone brand #{shop[:brand]}"
-          puts 'all techno phones available on Jumia Nigeria is been scrapped'
-          puts ''
+          added(shop)
         end
         page += 1
       end
