@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require_relative '../bin/main.rb'
+# require_relative '../bin/main.rb'
 require 'nokogiri'
 require 'httparty'
 require 'rubocop'
@@ -12,6 +12,14 @@ class Bot
     puts 'Goodbye'
   end
 
+  def export(smart_phone)
+    CSV.open('smart_phone.csv', 'w') do |csv|
+      smart_phone.each do |smart_phone1|
+        csv << [smart_phone1]
+      end
+    end
+  end
+
   # rubocop: disable Metrics/MethodLength
 
   def scraper
@@ -19,11 +27,11 @@ class Bot
     unparsed_page = HTTParty.get(url)
     parsed_page = Nokogiri::HTML(unparsed_page)
     smart_phone = []
-    shop_cart = parsed_page.css('a.link') # data for 40 phone
+    shop_cart = parsed_page.css('a.link')
     page = 1
-    per_page = shop_cart.count # 40
-    total = 1000 # parsed_page.css('span.total-products').text.split(' ')[0].split('').drop(1).join('').to_i #1978058
-    last_page = (total / per_page) # 26 pages
+    per_page = shop_cart.count
+    total = 50 # parsed_page.css('span.total-products').text.split(' ')[0].split('').drop(1).join('').to_i #1978058
+    last_page = (total / per_page)
     begin
       while page <= last_page
         pargination_url = "https://www.jumia.com.ng/mobile-phones/tecno/?page=#{page}"
@@ -39,11 +47,7 @@ class Bot
             specifications: shop_cart1.css('span.name').text,
             price_range: shop_cart1.css('span.price').text
           }
-          CSV.open('smart_phone.csv', 'w') do |csv|
-            smart_phone.each do |smart_phone1|
-              csv << [smart_phone1]
-            end
-          end
+          export(smart_phone)
           smart_phone << shop
           puts "Added phone brand #{shop[:brand]}"
           puts 'all techno phones available on Jumia Nigeria is been scrapped'
@@ -57,4 +61,5 @@ class Bot
 end
 start = Bot.new
 start.scraper
+# end
 # rubocop: enable Metrics/MethodLength

@@ -29,7 +29,7 @@ class Start
   def display
     puts 'Welcome to jumia.com.ng'
     puts 'This website helps you to find all smart-phone and tablets sold on jumia online shop.'
-    puts 'Type Okay and press enter to find out everything related to Smart phone sold on jumia.'
+    puts 'Type your any keywords and press enter to find out everything related to Smart phone sold on jumia.'
   end
 end
 new_search = Start.new
