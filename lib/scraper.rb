@@ -1,20 +1,5 @@
 #!/usr/bin/env ruby
-# require_relative '../bin/main.rb'
-
 class Bot
-  def feedback
-    puts 'All data has been exported to smart_phone.csv'
-    puts 'The prices are shown in Nigeria Naira'
-    puts 'Thank you for choosing us'
-    puts 'Goodbye'
-  end
-
-  def added(shop)
-    puts "Added phone brand #{shop[:brand]}"
-    puts 'Scraping all smart phone ********'
-    puts ''
-  end
-
   # rubocop: disable Metrics/MethodLength
 
   def scraper
@@ -59,8 +44,21 @@ class Bot
       end
     end
   end
+
+  def feedback
+    puts 'All data has been exported to smart_phone.csv'
+    puts 'The prices are shown in Nigeria Naira'
+    puts 'Thank you for choosing us'
+    puts 'Goodbye'
+  end
+
+  def added(shop)
+    puts "Added phone brand #{shop[:brand]}"
+    puts 'Scraping all smart phone ********'
+    puts ''
+  end
 end
 start = Bot.new
 start.scraper
-# end
+
 # rubocop: enable Metrics/MethodLength

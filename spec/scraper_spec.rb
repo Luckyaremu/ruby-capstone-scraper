@@ -1,7 +1,4 @@
-require './lib/main.rb'
-require 'nokogiri'
-require 'rubocop'
-require 'httparty'
+require './lib/scraper.rb'
 
 RSpec.describe Bot do
   describe 'export' do
