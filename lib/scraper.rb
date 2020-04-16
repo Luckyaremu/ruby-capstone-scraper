@@ -4,6 +4,7 @@ require 'rubocop'
 
 class Bot
   # rubocop: disable Metrics/MethodLength
+  # rubocop: disable Lint/UselessAssignment
 
   def scraper
     url = 'https://www.jumia.com.ng/smartphones/'
@@ -39,6 +40,8 @@ class Bot
     end
     feedback
   end
+
+  # rubocop: enable Lint/UselessAssignment
 
   def export(smart_phone)
     CSV.open('smart_phone.csv', 'w') do |csv|
