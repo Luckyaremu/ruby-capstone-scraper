@@ -14,7 +14,7 @@ class Bot
     shop_cart = parsed_page.css('a.link')
     page = 1
     per_page = shop_cart.count
-    total = 40
+    total = 1000
     last_page = (total / per_page)
     begin
       while page <= last_page
