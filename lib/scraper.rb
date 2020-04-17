@@ -14,7 +14,7 @@ class Bot
     shop_cart = parsed_page.css('a.link')
     page = 1
     per_page = shop_cart.count
-    total = 1000
+    total = 40
     last_page = (total / per_page)
     begin
       while page <= last_page
@@ -45,8 +45,9 @@ class Bot
 
   def export(smart_phone)
     CSV.open('smart_phone.csv', 'w') do |csv|
+      csv << %w[BRAND SPECIFICATIONS PRICES]
       smart_phone.each do |smart_phone1|
-        csv << [smart_phone1]
+        csv << [smart_phone1[:brand], smart_phone1[:specifications], smart_phone1[:price_range]]
       end
     end
   end
